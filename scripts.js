@@ -1,4 +1,21 @@
 
+function handleApiResponse(response) {
+    for (let i = 0; i < response.items.length; i++) {
+        let item = response.items[i];
+        let itemHtml;
+        if(item.volumeInfo.imageLinks){
+            itemHtml = '<div class="col-md-3 p-2"><div class="card">'+
+                '<img src="'+ item.volumeInfo.imageLinks.thumbnail +'" class="card-img-top">' +
+                '<div class="card-body"><h5 class="card-title">' +  item.volumeInfo.title + '</h5>' +
+                '<p class="card-text">'+ item.volumeInfo.authors[0] +'</p></div></div></div>';
+        } else {
+            itemHtml = '<div class="col-md-3 p-2"><div class="card">'+
+                '<div class="card-body"><h5 class="card-title">' +  item.volumeInfo.title + '</h5>' +
+                '<p class="card-text">'+ item.volumeInfo.authors[0] +'</p></div></div></div>';
+        }
+        document.getElementById("content").innerHTML += itemHtml;
+    }
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     // var myHeaders = new Headers();
@@ -17,17 +34,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('loginForm')
     const loginLink = document.getElementById('login-link');
     const loggedUser = document.getElementById('logged-user');
-
-    if(sessionStorage.getItem('email')) {
-        loginLink.hide();
-        loggedUser.innerHTML = sessionStorage.getItem('email');
-    } else {
-        loginLink.show();
-        loggedUser.hide();
+    const logoutBtn = document.getElementById('logoutBtn');
+    const logoutItem = document.getElementById('logoutItem');
+    function checkLogin() {
+        const email = sessionStorage.getItem('email');
+        if (email) {
+            loggedUser.textContent = email;
+            loginLink.style.display = "none";
+            logoutItem.style.display = 'block';
+        } else {
+            loggedUser.textContent = '';
+            loginLink.style.display = "block";
+            logoutItem.style.display = 'none';
+        }
     }
-    loginForm.addEventListener('submit', (event) => {
-        event.preventDefault()
-        let email = document.getElementById('emailInput')
-        sessionStorage.setItem('email', email)
-    })
+    checkLogin()
+    if(loginForm){
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault()
+            let email = document.getElementById('emailInput')
+            sessionStorage.setItem('email', email.value)
+            console.log(sessionStorage.getItem('email'))
+            checkLogin
+            loginForm.reset()
+            window.location.href = 'index.html';
+        })
+    }
+    logoutBtn.addEventListener('click', () => {
+        sessionStorage.removeItem('email');
+        checkLogin();
+        window.location.href = 'login.html';
+    });
+    
 })

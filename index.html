@@ -15,19 +15,27 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./login.html" id="login-link">Login</a>
               </li>
+              <span id="logged-user" class="navbar-text mr-2"></span>
+              <li class="nav-item" id="logoutItem">
+                <button class="btn btn-outline-secondary" id="logoutBtn">Logout</button>
+              </li>
             </ul>
-            <span id="logged-user" class="navbar-text"></span>
           </div>
         </div>
       </nav>
+    <main class="container">
+        <div id="content" class="row">
+        </div>
+    </main>
     <script src="scripts.js"></script>
+    <script src="https://www.googleapis.com/books/v1/volumes?q=harry+potter&callback=handleApiResponse"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
