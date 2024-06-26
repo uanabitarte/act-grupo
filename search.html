@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Responsive :: Actividad Grupal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">BookCloud</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./search.html">Buscador</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./login.html" id="login-link">Login</a>
+              </li>
+              <span id="logged-user" class="navbar-text mr-2"></span>
+              <li class="nav-item" id="logoutItem">
+                <button class="btn btn-outline-secondary" id="logoutBtn">Logout</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <main class="container mt-5">
+        <h1 class="text-center">Encuentra el libro que estás buscando</h1>
+        <div class="row justify-content-center">
+            <form class="col-md-8" id="searchForm">
+                <div class="row mb-3">
+                    <div class="col-md-12">
+                        <label for="exampleInputEmail1" class="form-label">Palabras clave:</label>
+                        <input type="text" class="form-control" id="qInput" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <label for="filter" class="form-label col-md-2">Buscar:</label>
+                            <div class="col-md-10">
+                                <select class="form-control" id="filter">
+                                    <option value="" selected>Todos los libros</option>
+                                    <option value="partial">Vista previa parcial</option>
+                                    <option value="full">Texto visible</option>
+                                    <option value="free-ebooks">Ebooks gratuitos</option>
+                                    <option value="paid-ebooks">Ebooks de pago</option>
+                                    <option value="ebooks">Ebooks</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <label for="printType" class="form-label col-md-4">Tipo de libro:</label>
+                            <div class="col-md-8">
+                                <select class="form-control" id="printType">
+                                    <option value="all">Todos los libros</option>
+                                    <option value="books">Solo libros</option>
+                                    <option value="magazines">Solo revistas</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="author" class="form-label">Autor</label>
+                        <input type="text" class="form-control" id="author">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="publisher" class="form-label">Editor</label>
+                        <input type="text" class="form-control" id="publisher">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <button id="search-btn" type="submit" class="col-md-2 btn btn-primary">Buscar</button>
+                </div>
+                
+            </form>
+        </div>
+        <div id="search-content" class="row">
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
