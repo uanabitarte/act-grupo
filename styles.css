@@ -1,0 +1,161 @@
+body,html {
+    font-family: Verdana, Tahoma, sans-serif;
+    
+}
+
+.envio {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+/* .envio h2 {
+    margin-bottom: 10px;
+} */
+
+/* .envio p {
+    margin-top: 0; 
+} */
+
+.imagen-header {
+    overflow: hidden;
+    margin-top: 20px;
+    filter: opacity(80%);;
+    object-position: center;
+    width: 100%;
+    height: 300px;
+}
+
+.Logo1 {width: 170px;
+display: flex;
+margin-left: 5px;}
+
+.col-md-8 {
+    background-color: rgb(178, 177, 218);
+    border-radius: 20px;
+    font-size: medium;
+    font-weight:bold;
+    padding: 20px;
+
+}
+
+.hr-container {
+    border: none;
+    width: 20%;
+    height: 2px;
+    background-color: rgb(207, 182, 231);; 
+    margin: 30px auto;
+    
+}
+
+
+.text-center {
+    
+    padding-top: 10px;
+    border: 2px solid rgb(207, 182, 231);
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    max-width: fit-content;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 30px;
+}
+
+
+#aviso {
+    padding: 20px;
+    margin: 20px;
+}
+
+.title-login{
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+.my-5 {
+    
+    font-size: medium;
+    font-weight:bold;
+    max-width: fit-content;
+    padding: 20px;
+
+    justify-content: center;
+}
+#loginForm {
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 10px;
+}
+/*.navbar-brand {
+    background-color: rgb(227, 166, 166);
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 20px;
+    
+}*/
+
+.navbar-toggler {
+    background-color: chartreuse;
+}
+
+
+.container-mt-5{margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+
+}
+
+
+.row-g-0{
+display: flex;
+margin: 10px;
+padding: 10px;
+}
+
+
+.portada{
+    width: 90%;
+    border-radius: 5px;
+    display: flex;
+}
+
+.col-md-9{
+    width: 66.5% !important;
+display: flex;
+background-color: rgb(178, 177, 218);
+    border-radius: 20px;
+    font-size: medium;
+    font-weight:bold;
+    padding: 20px;
+}
+
+.card-body {
+margin-right: 50px;
+margin-left: 10px;
+margin-top: 10px;}
+
+.page-title {display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-top: 20px;
+
+}
+
+
+.card-title { font-size: 20px;
+    padding-bottom: 20px;
+
+}
+.card-text { font-weight: 400;
+    padding-bottom: 20px;
+    
+
+}
